@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScriptの練習 - 04</title>
+  </head>
+  <body>
+    <script>
+      // 問題１
+      var calc = {
+        add: function(x, y) {
+          console.log(x + y);
+        },
+        subtract: function(x, y) {
+          console.log(x - y);
+        },
+        multiply: function(x, y) {
+          console.log(x * y);
+        },
+        divide: function(x, y) {
+          console.log(x / y);
+        }
+      };
+
+      calc.add(3,4);
+      calc.subtract(20,10);
+      calc.multiply(7,7);
+      calc.divide(10,2);
+
+      // 問題２
+      function greet(name, age){
+        var greetText = '名前は' + name + 'です。年齢は' + age + '歳です。';
+        return greetText
+      }
+
+      console.log(greet("おさかな", 37));
+
+      // 問題３
+      setTimeout(function() {
+        var setTimeoutText = 'ここはsetTimeoutの中の関数です';
+        resolveScope(setTimeoutText);
+      }, 3000);
+
+      function resolveScope(message) {
+        console.log(message);
+      }
+
+    </script>
+  </body>
+</html>
